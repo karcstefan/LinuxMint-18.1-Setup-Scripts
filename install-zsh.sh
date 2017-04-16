@@ -6,12 +6,10 @@ sudo apt-get install -y zsh terminator
 echo "Installing Oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-echo "Do you want to install agnoster theme(Y/n)"
-read input
-if [[ $input == "Y" || $input == "y" ]]; then
-        sh install-agnoster.sh
-else
-        echo "Skipping agnoster installation"
+read -r -p "Do you want to install agnoster theme? [Y/n]" response
+response=${response,,}
+if [[ $response =~ ^(yes|y| ) ]] | [ -z $response ]; then
+   your-action-here
 fi
 
 echo "Setting default shell to zsh"
