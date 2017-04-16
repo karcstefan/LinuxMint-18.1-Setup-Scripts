@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing ZSH and terminator"
-sudo apt-get install zsh terminator
+sudo apt-get install -y zsh terminator
 
 echo "Installing Oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
