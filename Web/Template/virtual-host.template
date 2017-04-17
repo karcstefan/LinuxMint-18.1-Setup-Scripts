@@ -4,10 +4,10 @@
   	DocumentRoot {SITE_FULL_PATH}
  
 	<Directory {SITE_FULL_PATH}>
-        	Options FollowSymLinks MultiViews
-        	Order deny,allow
-        	Allow from all
-    	</Directory>
+		Options Indexes FollowSymLinks
+		AllowOverride None
+		Require all granted
+	</Directory>
    
 	ErrorLog ${APACHE_LOG_DIR}/{SITE_URL}-error.log
     	CustomLog ${APACHE_LOG_DIR}/{SITE_URL}-access.log combined
