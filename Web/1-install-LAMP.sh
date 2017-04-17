@@ -4,6 +4,10 @@ echo "Installing apache2 and mysql"
 sudo apt-get install -y apache2
 sudo apt-get install -y mysql
 
+echo "Installing mysql-worbench"
+sudo apt-get install mysql-workbench
+
+
 echo "Adding ondrej/php repository for older versions of php"
 sudo apt-add-repository ppa:ondrej/php
 sudo apt-get update
