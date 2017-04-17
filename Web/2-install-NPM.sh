@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing nodejs package manager"
-sudo apt-get install npm
+sudo apt-get install -y npm
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 echo "Update NPM to the latest"
