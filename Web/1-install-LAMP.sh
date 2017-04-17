@@ -1,7 +1,12 @@
 #!/bin/bash
 
-echo "Installing apache2 and mysql"
+echo "Installing apache2l"
 sudo apt-get install -y apache2
+
+echo "Enable mod_rewrite for apache2"
+sudo a2enmod rewrite
+
+echo "Installing MySQLl serevr"
 sudo apt-get install -y mysql-server
 
 echo "Installing mysql-worbench"
