@@ -6,6 +6,9 @@ sudo apt-get install -y apache2
 echo "Enable mod_rewrite for apache2"
 sudo a2enmod rewrite
 
+echo "Link command for virtual host creation (a2create) to /usr/bin"
+sudo ln -s $PWD/a2create /usr/bin/a2create
+
 echo "Installing MySQLl serevr"
 sudo apt-get install -y mysql-server
 
