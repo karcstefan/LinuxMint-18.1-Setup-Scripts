@@ -2,7 +2,7 @@
 
 echo "Installing apache2 and mysql"
 sudo apt-get install -y apache2
-sudo apt-get install -y mysql
+sudo apt-get install -y mysql-server
 
 echo "Installing mysql-worbench"
 sudo apt-get install mysql-workbench
