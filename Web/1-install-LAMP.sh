@@ -15,8 +15,9 @@ sudo apt-get update
 read -r -p "Which version of php do you want to install? (e.g 5.6, 7.0): " version
 
 if [[ -f "PHP/version-$version.sh" ]]; then
-	echo "Starting on installing php$version"
+	echo "Starting on installing php$version and phpunit"
 	sh "PHP/version-$version.sh"
+	sh "PHP/install-phpunit.sh"
 else
 	echo "There is no script for that version"
 fi 
