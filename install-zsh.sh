@@ -9,7 +9,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 read -r -p "Do you want to install agnoster theme? [Y/n]" response
 response=${response,,}
 if [[ $response =~ ^(yes|y| ) ]] | [ -z $response ]; then
-   your-action-here
+	sh install-agnoster.sh
 fi
 
 echo "Setting default shell to zsh"
