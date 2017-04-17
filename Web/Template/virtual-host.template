@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+    	ServerName {SITE_URL}
+    	ServerAlias www.{SITE_URL}
+  	DocumentRoot {SITE_FULL_PATH}
+ 
+	<Directory {SITE_FULL_PATH}>
+        	Options FollowSymLinks MultiViews
+        	Order deny,allow
+        	Allow from all
+    	</Directory>
+   
+	ErrorLog ${APACHE_LOG_DIR}/{SITE_URL}-error.log
+    	CustomLog ${APACHE_LOG_DIR}/{SITE_URL}-access.log combined
+</VirtualHost>
