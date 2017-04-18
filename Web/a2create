@@ -8,7 +8,11 @@ read -r -p "Site Full Path: " site_path
 [ -f $site_path -o -d $site_path ] || ( echo "No such file or folder found at $site_path"; exit 1 )
 
 echo "Copying template virtual host to apache2"
-sudo cp Template/virtual-host.template /etc/apache2/sites-available/$site_url.conf
+
+SCRIPT=`realpath $0`
+SCRIPTPATH=`dirname $SCRIPT`
+
+sudo cp $SCRIPTPATH/Template/virtual-host.template /etc/apache2/sites-available/$site_url.conf
 
 echo "Modfying variables in the template"
 sudo sed -i -e "s/{SITE_URL}/$site_url/g" /etc/apache2/sites-available/$site_url.conf
