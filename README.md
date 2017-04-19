@@ -34,3 +34,6 @@ Features:
   - Sardy Icons
 
 * i3 Setup (Dynamic Tiling Window Manager)
+
+* Scripts
+ - Window switch between monitors
