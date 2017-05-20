@@ -23,6 +23,9 @@ sudo apt-get update
 read -r -p "Which version of php do you want to install? (e.g 5.6, 7.0): " version
 
 if [[ -f "PHP/version-$version.sh" ]]; then
+	echo "Installing PHP xDebug"
+	sudo apt-get install php-xdebug
+
 	echo "Starting on installing php$version and phpunit"
 	sh "PHP/version-$version.sh"
 	sh "PHP/install-phpunit.sh"
